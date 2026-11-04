@@ -1,0 +1,6 @@
+breadcrumb:
+  ros__parameters:
+    drop_distance: 0.5
+    drop_angle: 0.35
+    max_crumbs: 2048
+    frame_id: odom

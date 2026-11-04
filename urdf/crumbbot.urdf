@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- Minimal diff-drive test robot. Not to scale. Not to be trusted with stairs. -->
+<robot name="crumbbot">
+  <link name="base_link">
+    <visual>
+      <geometry><cylinder radius="0.18" length="0.08"/></geometry>
+    </visual>
+  </link>
+
+  <link name="left_wheel">
+    <visual><geometry><cylinder radius="0.035" length="0.02"/></geometry></visual>
+  </link>
+  <link name="right_wheel">
+    <visual><geometry><cylinder radius="0.035" length="0.02"/></geometry></visual>
+  </link>
+
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.15 -0.03" rpy="-1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.15 -0.03" rpy="-1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+</robot>
